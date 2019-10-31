@@ -1,28 +1,30 @@
 body, html{
   min-height: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background: rgb(250, 250, 250);
 }
-img{
-  width: 100%;
+
+.mask-area{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 
 }
-.mask-area{
-text-align: center;
-  margin:  0 auto;
-  display: flex;
-  justify-content: center;
-  vertical-align: middle;
-}
 #service-area{ 
+  /* margin-top: 30px; */
+  /* display: inline-block; */
+  /* vertical-align: middle; */
+  margin: 0 auto;
   width: 90%;
   mask: url('./Assets/SpaceAreasvg.svg') no-repeat;
   mask-type: alpha;
   
 }
-img{
-  width: 90%;
-  height: auto;
+
+.out-screen{
+  padding: 20px;
 }

@@ -2,12 +2,13 @@
 //the most outter screen
 
 import React, { Component } from 'react'
+import '../App.css';
 
 class OutterScreen extends Component {
     render () {
         return (
-            <div>
-                
+            <div className="out-screen">
+                {this.props.text}
             </div>
         )
     }
