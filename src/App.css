@@ -4,27 +4,28 @@ body, html{
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background: rgb(250, 250, 250);
+  background: rgb(100, 2, 2);
 }
 
 .mask-area{
   display: flex;
   align-items: center;
   justify-content: center;
-
-
+  text-align: center;
 }
-#service-area{ 
-  /* margin-top: 30px; */
-  /* display: inline-block; */
-  /* vertical-align: middle; */
-  margin: 0 auto;
-  width: 90%;
-  mask: url('./Assets/SpaceAreasvg.svg') no-repeat;
-  mask-type: alpha;
-  
+.display-area{ 
+  margin:auto;
+  position: relative;
+  width: 95%;
+  height: auto;
+  mask: url('./Assets/mask.svg');
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-mode: alpha;  
 }
 
-.out-screen{
-  padding: 20px;
+.outter-screen{
+  text-align: center;
+  color: white;
+  padding: 3%;
 }

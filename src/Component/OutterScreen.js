@@ -7,7 +7,7 @@ import '../App.css';
 class OutterScreen extends Component {
     render () {
         return (
-            <div className="out-screen">
+            <div className="outter-screen">
                 {this.props.text}
             </div>
         )

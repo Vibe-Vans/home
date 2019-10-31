@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="Main">
-      <OutterScreen classname="out-screen" text={'Display Temp'}/>
+      <OutterScreen classname="out-screen" text={'LOGO'}/>
      <DisplayScreen/>
     </div>
   );
