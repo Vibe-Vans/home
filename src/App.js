@@ -1,11 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+import DisplayScreen from './Component/DisplayScreen'
 
 function App() {
   return (
     <div className="Main">
-     
+     <DisplayScreen/>
     </div>
   );
 }
