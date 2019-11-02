@@ -3,29 +3,41 @@ body, html{
   height: 100vh;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background: rgb(100, 2, 2);
+  /* overflow: hidden; */
+  font-family:Helvetica, sans-serif;
+  background: rgb(31, 31, 31);
+  color: rgb(230, 143, 45);
 }
 
-.mask-area{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.display-area{ 
-  margin:auto;
-  position: relative;
-  width: 95%;
-  height: auto;
-  mask: url('./Assets/mask.svg');
-  mask-position: center;
-  mask-repeat: no-repeat;
-  mask-mode: alpha;  
-}
-
-.outter-screen{
-  text-align: center;
-  color: white;
-  padding: 3%;
-}
+.mask{
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    position: relative;
+    margin:  0 auto; 
+    -webkit-border-radius: 15% / 19%;
+    border-radius: 15% / 19%;  
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: #330502;
+  }
+  
+  .mask::before {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    position: absolute;
+   
+    content: "";
+    top: 7.5%;
+    right: -1.5%;
+    bottom: 7.5%;
+    left: -1.5%;
+    border: none;
+    -webkit-border-radius: 5% / 40%;
+    border-radius: 5% / 40%;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: #330502;
+    text-shadow: none;
+  }

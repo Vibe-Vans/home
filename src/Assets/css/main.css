@@ -1,0 +1,29 @@
+.main{
+    /* padding: 25px; */
+    margin:auto;
+    position: relative;
+  /* width: 100%; */
+
+  /* mask: url('../Images/mask-1.svg');
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-mode: alpha;   */
+  
+  }
+
+  /* PADDING */
+  .pd-tb{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+/* TOP */
+.logo img{
+  width: 35px;
+}
+
+.outter-screen{
+
+  color: white;
+  padding: 3%;
+}
