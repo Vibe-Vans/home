@@ -7,8 +7,6 @@ import Middle from './Component/Middle';
 import Bottom from './Component/Bottom';
 
 
-import OutterScreen from './Component/OutterScreen';
-
 function App() {
 
     return (

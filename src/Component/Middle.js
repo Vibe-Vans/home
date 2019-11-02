@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import DisplayScreen from './DisplayScreen'
 import '.././Assets/css/main.css';
 
+
 class Middle extends Component {
     render () {
         return (
@@ -13,7 +14,7 @@ class Middle extends Component {
                     <DisplayScreen/>
                 </div>
                 <div className="col-1"  style={{textAlign:"center", margin:"20% auto"}}>
-                <h6>Date</h6>
+                Weather
                 </div>
                 
             </div>
