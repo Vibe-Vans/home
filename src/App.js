@@ -16,6 +16,8 @@ function App() {
                     <Top />
                 </div>
                 <div className="col-12" >
+
+                    {/* I have to pass lat and log based on the user current location to display weather */}
                     <Middle  />
                 </div>
                 <div className="col-12">

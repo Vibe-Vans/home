@@ -11,7 +11,7 @@ class DisplayScreen extends Component {
         return (
             <div>
                 {/* <img src={hotelfront} alt="hotel" style={{width:"100%",borderRadius:"20px"}}></img> */}
-                <video  autoPlay style={{width:"100%", height:"auto",borderRadius:"20px"}}>
+                <video  autoPlay style={{width:"96%", height:"auto",borderRadius:"20px"}}>
                     <source src={movie} type="video/mp4"/>
                 </video>
             </div>

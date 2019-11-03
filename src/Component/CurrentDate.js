@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
 
 class CurrentDate extends Component {
+
 constructor (props) {
     super(props)
-    this.state= {date: new Date().toLocaleDateString( [], {weekday: 'short', month: 'short', day: 'numeric'} )}
+    this.state= {
+        date: new Date().toLocaleDateString( [], 
+            {weekday: 'short', month: 'short', day: 'numeric'} 
+            )
+        }
 }
     render () {
         
