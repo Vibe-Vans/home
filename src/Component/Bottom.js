@@ -5,7 +5,7 @@ class Bottom extends Component {
     render () {
         return (
             <div className="pd-tb" style={{textAlign:"center", margin:"0 auto"}}>
-                <h6>Wifi:Pod</h6>
+                <span>Wifi: {this.props.wifi}</span>
             </div>
         )
     }

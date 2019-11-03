@@ -10,14 +10,14 @@ class Middle extends Component {
         super(props);
         
         this.state ={
-            travelTime: "20 Min"
+            duration: "20 Min"
         }
     }
     
     render () {
         return (     
-                <div style={{textAlign:"center",display:"flex", alignItems:"center",justifyContent:"center"}}>
-                    <DistanceTrack travelTime={this.state.travelTime}/>
+                <div style={{display:"flex", alignItems:"center",justifyContent:"space-evenly",justifyItems:"center"}}>
+                    <DistanceTrack duration={this.state.duration}/>
                     <DisplayScreen />
                     <CurrentWeather/>
                 </div>

@@ -19,11 +19,25 @@
 
 /* TOP */
 .logo img{
-  width: 25px;
+  width: 65px;
 }
+.half-cir{
+  
 
-.outter-screen{
-
-  color: white;
-  padding: 3%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction:column;
+  align-items: center;
+  text-align: center;
+  height: 140px;
+  width: 65px;
+  margin: auto;
+  background-color: rgba(255, 255, 255,.1);
+}
+.half-cir-right{ 
+  border-radius: 90px 0 0 90px;
+}
+.half-cir-left{
+  border-radius: 0 90px 90px 0;
 }

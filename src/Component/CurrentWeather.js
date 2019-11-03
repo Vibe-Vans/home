@@ -35,6 +35,7 @@ class CurrentWeather extends Component {
     componentDidMount(){
          
         let url = `https://api.openweathermap.org/data/2.5/weather?lat=${this.state.latitude}&lon=${this.state.longitude}&units=imperial&APPID=${API_KEY}`;
+        // https://api.openweathermap.org/data/2.5/weather?lat=34.0522&lon=118.2437&units=imperial&APPID=ebcfef84503df0b471b23283d3709251
          // Call the API, and set the state of the weather forecast
          fetch(url) 
          .then(response => response.json())
@@ -100,8 +101,8 @@ class CurrentWeather extends Component {
     }
         return (
 
-            <div style={{textAling:"center", margin:"auto"}}>   
-                <img src={icon}/>
+            <div className="half-cir half-cir-right" style={{width:"5%"}}>   
+                <img src={icon} width="75px"/>
                 <span>
                     {/* {this.state.currentTemp }<sup>o</sup>F */}
                     {this.state.currentTemp }<sup>o</sup>

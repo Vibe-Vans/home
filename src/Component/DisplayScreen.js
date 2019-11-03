@@ -9,9 +9,9 @@ import '../App.css';
 class DisplayScreen extends Component {
     render () {
         return (
-            <div>
+            <div style={{width:"92%", display:"inline-block", textAlign:"center"}}>
                 {/* <img src={hotelfront} alt="hotel" style={{width:"100%",borderRadius:"20px"}}></img> */}
-                <video  autoPlay style={{width:"96%", height:"auto",borderRadius:"20px"}}>
+                <video  autoPlay style={{width:"100%",borderRadius:"15px", textAlign:"center"}}>
                     <source src={movie} type="video/mp4"/>
                 </video>
             </div>
