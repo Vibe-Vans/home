@@ -15,7 +15,8 @@ class Middle extends Component {
     }
     
     render () {
-        return (     
+        return (      
+          
                 <div style={{display:"flex", alignItems:"center",justifyContent:"space-evenly",justifyItems:"center"}}>
                     <DistanceTrack duration={this.state.duration}/>
                     <DisplayScreen />

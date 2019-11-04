@@ -22,9 +22,8 @@
   width: 65px;
 }
 .half-cir{
-  
-
-  position: relative;
+   position: relative;
+   padding: 15px;
   display: flex;
   justify-content: center;
   flex-direction:column;
@@ -34,10 +33,31 @@
   width: 65px;
   margin: auto;
   background-color: rgba(255, 255, 255,.1);
+  animation: animate 10s linear infinite;
 }
 .half-cir-right{ 
   border-radius: 90px 0 0 90px;
+
 }
 .half-cir-left{
   border-radius: 0 90px 90px 0;
+  
 }
+@keyframes animate{
+  0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255,.7);  
+  }
+  25% {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255,0);
+  }
+  50% {
+    background-color: rgba(255, 255, 255,0);
+  }
+  75% {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255,0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255,0);  
+  }
+}
+

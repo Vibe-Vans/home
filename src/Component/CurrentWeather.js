@@ -100,7 +100,7 @@ class CurrentWeather extends Component {
         this.setState({icon:this.state.icon});
     }
         return (
-
+            
             <div className="half-cir half-cir-right" style={{width:"5%"}}>   
                 <img src={icon} width="75px"/>
                 <span>
@@ -108,8 +108,8 @@ class CurrentWeather extends Component {
                     {this.state.currentTemp }<sup>o</sup>
                 </span> 
             </div>
-        )
-    }
+
+                )}    
 }
 
 export default CurrentWeather
