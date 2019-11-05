@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import{Spring, Transition, config} from 'react-spring/renderprops';
 
 const API_KEY = "AIzaSyA4LrSdVLZLIS3p-Ql63s4c0sLBjyR5PXI "; /*Personal hetalpatel0976 */
 
@@ -30,10 +31,31 @@ class DistanceTrack extends Component {
     }
     render () {
         return (
-            <div className="half-cir half-cir-left" style={{width:"5%"}}>
+            <Spring
+            from={{
+                opacity:0,
+                marginLeft:'-10px',  
+            }}
+            to={{
+                opacity:1,
+                marginLeft:'0px',
+            
+            }}
+            config={{
+                delay:100,
+                duration:1000
+            }}>
 
-               {this.props.duration}
-            </div>
+                {
+                    animate => (
+                    <div className="half-cir half-cir-left" style={animate}>
+                        {this.props.duration}
+                    </div>
+                    )
+
+                }
+            </Spring>
+            
         )
     }
 }

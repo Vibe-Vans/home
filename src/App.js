@@ -1,52 +1,64 @@
-import React, {Component} from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import './Assets/css/main.css';
-import Top from './Component/Top';
-import Middle from './Component/Middle';
-import Bottom from './Component/Bottom';
+import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import "./Assets/css/main.css";
+import Top from "./Component/Top";
+import Middle from "./Component/Middle";
+import Bottom from "./Component/Bottom";
+import { Spring } from "react-spring/renderprops";
+const styles ={
+    layout:{
+        display: 'flex',
+        flexDirection: "column"
+    },
+    top:{
+        height:'5%',
+        zIndex:2,
+        position: "relative",
+        marginBottom:'-20px'
 
-
+    },
+    middle:{
+       
+        zIndex:1,
+        // position: "relative"
+    },
+    bottom:{
+        height:'5%',
+        zIndex:1,
+        // position: "relative"
+    }
+    
+}
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state={
+        this.state = {
             wifi: "Pod"
-        }
+        };
     }
-    
-    render(){
-        return (
-            <div className="mask" style={{display:"flex", flexDirection:"column"}}>
-                {/* <div className="row">
-                    <div className="col-12" style={{zIndex:2}}>
-                        <Top />
-                    </div>
-                    <div className="col-12" >
-    
-                        <Middle  />
-                    </div>
-                    <div className="col-12">
-                        <Bottom  wifi={this.state.wifi}/>
-                    </div>
-                </div> */}
 
-                    <div style={{zIndex:2, height:"5%", position:"relative"}}>
-                        <Top />
-                    </div>
-                    <div style={{zIndex:1, height:"90%", marginTop:"-3%", position:"relative"}} >
-    
-                        <Middle  />
-                    </div>
-                    <div style={{zIndex:1, height:"5%", position:"relative"}} >
-                        <Bottom  wifi={this.state.wifi}/>
-                    </div>
+    render() {
+        return (
+            <div
+                className='mask'
+                style={styles.layout}
+            >
+                <div style={styles.top}>
+                    <Top />
+                </div>
+
+                <div className='middle'>
+                    <Middle />
+                </div>
+                
+                <div style={styles.bottom}>
+                    <Bottom wifi={this.state.wifi} />
+                </div>
+               
             </div>
         );
     }
- 
-    
 }
 
 export default App;
-

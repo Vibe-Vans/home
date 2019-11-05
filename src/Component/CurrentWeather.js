@@ -14,7 +14,7 @@ import Thunder from '../Assets/icons/thunder.svg';
 import Snow from '../Assets/icons/snowy-1.svg';
 import Foggy from '../Assets/icons/cloudy-day-3.svg';
 import Weather from '../Assets/icons/weather.svg';
-
+import {Spring} from 'react-spring/renderprops';
 
 const API_KEY = 'ebcfef84503df0b471b23283d3709251';
 const API_KEY_2= '5cf13fa84fd84e451af3a321489eb3aa'; /* Personal KEY*/
@@ -100,14 +100,36 @@ class CurrentWeather extends Component {
         this.setState({icon:this.state.icon});
     }
         return (
+            <Spring 
+            from={{
+                opacity:0,
+                marginRight:'-10px',  
+            }}
+            to={{
+                opacity:1,
+                marginRight:'0px',
             
-            <div className="half-cir half-cir-right" style={{width:"5%"}}>   
-                <img src={icon} width="75px"/>
-                <span>
-                    {/* {this.state.currentTemp }<sup>o</sup>F */}
-                    {this.state.currentTemp }<sup>o</sup>
-                </span> 
-            </div>
+            }}
+            config={{
+                delay:100,
+                duration:1000
+            }}>
+
+                {
+                    animate => (
+                    <div className="half-cir half-cir-right" style={animate}>
+                       
+                        <img src={icon} width="75px"/>
+                        <span>
+                            {/* {this.state.currentTemp }<sup>o</sup>F */}
+                            {this.state.currentTemp }<sup>o</sup>
+                        </span> 
+                        </div>
+                    )
+
+                }
+            </Spring>
+       
 
                 )}    
 }
