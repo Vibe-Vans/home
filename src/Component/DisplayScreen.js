@@ -13,7 +13,7 @@ class DisplayScreen extends Component {
          
                     <div className="display_area">
                     {/* <img src={hotelfront} alt="hotel" style={{width:"100%",borderRadius:"20px"}}></img> */}
-                        <video  autoPlay className="video">
+                        <video  loop autoPlay className="video">
                             <source src={tunnel} type="video/mp4" />
                         </video>
                 </div>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Spring} from 'react-spring/renderprops';
 import '.././Assets/css/main.css';
-import logo from '../Assets/images/logo192.png';
+import logo from '../Assets/images/VibeVans.svg';
 import Clock   from './Clock';
 import CurrentDate from './CurrentDate.js';
 
@@ -24,7 +24,7 @@ class Top extends Component {
             <Spring 
                     from={{
                         opacity:0,
-                        transform: 'translate3d(5px,0,0) scale(3) rotateX(10deg)'
+                        transform: 'translate3d(5px,0,0) scale(2) rotateX(10deg)'
                         }
                     }
                     to={{

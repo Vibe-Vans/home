@@ -84,11 +84,18 @@ width: 80px;
  
   }
 }
-
+.bottom_area{
+  height: 5%;
+  text-align: center;
+  /* margin: 0 auto; */
+  display:flex; 
+  justify-content: center;
+ 
+}
 .middle{
   z-index: 1;
   height: 90%;
-  marginTop: -5%;
+  /* marginTop: -5%; */
   position: relative;
 }
 video{

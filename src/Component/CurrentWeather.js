@@ -40,14 +40,21 @@ class CurrentWeather extends Component {
          fetch(url) 
          .then(response => response.json())
          .then(data => {
-             this.setState({
+            this.weather = setInterval(() => {
+                this.setState({
                     currentTemp: Math.round(data.main.temp),
                     desc: data.weather[0].description,
                     icon: data.weather[0].icon
                   });
                 //   this.props.setTemp(Math.round(data.main.temp));
                })
-            
+               }, 1000);
+                 
+    }
+
+     
+    componentWillUnmount(){
+        clearInterval(this.weather);
     }
 
     render () {
@@ -112,7 +119,8 @@ class CurrentWeather extends Component {
             }}
             config={{
                 delay:100,
-                duration:1000
+                duration:1000,
+                
             }}>
 
                 {

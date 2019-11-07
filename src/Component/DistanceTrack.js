@@ -43,7 +43,8 @@ class DistanceTrack extends Component {
             }}
             config={{
                 delay:100,
-                duration:1000
+                duration:1000,
+             
             }}>
 
                 {

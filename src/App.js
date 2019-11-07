@@ -5,7 +5,7 @@ import "./Assets/css/main.css";
 import Top from "./Component/Top";
 import Middle from "./Component/Middle";
 import Bottom from "./Component/Bottom";
-import { Spring } from "react-spring/renderprops";
+
 const styles ={
     layout:{
         display: 'flex',
@@ -52,7 +52,7 @@ class App extends Component {
                     <Middle />
                 </div>
                 
-                <div style={styles.bottom}>
+                <div style={styles.bottom} className="pd-tb bottom_area">
                     <Bottom wifi={this.state.wifi} />
                 </div>
                
