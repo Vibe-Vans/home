@@ -6,10 +6,44 @@ body, html{
   overflow: hidden;
   font-family:Helvetica, sans-serif;
   font-weight: 600;
-  background: rgb(31, 31, 31);
+  background: rgb(194, 194, 194);
   color: rgb(235, 132, 14);
+  clip-path: url('./Assets/images/ScreenArea-new.svg');
+
+ 
+/* }
+.svgpathmask{
+  height: 100vh;
+  width: 100%;
+ background-color: #f4f233;
+  clip-path: url('#svgPath');
+ 
 }
 
+.svgpathmask video, .svgpathmask svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  top: 0;
+  left: 0;
+}
+.svgpathmask svg {
+  box-sizing: content-box;
+  padding: 5px; /* cover up edges of video completely */
+  top: -5px; left: -5px;
+  overflow: visible;                 
+}
+ */
+
+
+.mast-new{
+  clip-path:  url('./Assets/images/ScreenArea-new.svg');
+  /* mask-position: center;
+  mask-repeat: no-repeat;
+  mask-mode: auto;  */
+ /* mask-size: 100%; */
+}
 .mask{
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -21,7 +55,7 @@ body, html{
     border-radius: 15% / 19%;  
     -o-text-overflow: clip;
     text-overflow: clip;
-    background: #330502;
+    background: #752822;
   }
   
   .mask::before {
@@ -40,6 +74,6 @@ body, html{
     border-radius: 5% / 40%;
     -o-text-overflow: clip;
     text-overflow: clip;
-    background: #330502;
+    background: #752822;
     text-shadow: none;
   }

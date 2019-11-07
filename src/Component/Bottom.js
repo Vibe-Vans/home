@@ -12,12 +12,18 @@ class Bottom extends Component {
         this.animation = [
             { left: '-40%' },
             { left: '40%' },
-            { top: '60px' },
-            { scale: 0.7 },
+            { top: '30px' },
+            { scale: 0 },
+            {opacity:.2},
             { scale: 1 },
+            {opacity:.5},
             { top: 0 },
+            {opacity:1},
             { left: '20%' },
-            {ease:'easeInElastic'}
+            {delay:500},
+            {duration:1000},
+            {ease:"easeInOutElastic"}
+          
           ];
       }
     render() {
@@ -52,7 +58,7 @@ class Bottom extends Component {
                             paused={this.props.paused}
                             repeat={-1} 
                             yoyo 
-                            style={{ transform: 'scale(1.2)' }}>
+                         >
                                 <span>Wifi: {this.props.wifi }</span>
                         </TweenOne>
                         
