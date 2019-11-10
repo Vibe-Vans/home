@@ -4,6 +4,7 @@ import '.././Assets/css/main.css';
 import logo from '../Assets/images/VibeVans.svg';
 import Clock   from './Clock';
 import CurrentDate from './CurrentDate.js';
+import Branding from './Branding';
 
 class Top extends Component {
     render () {
@@ -45,10 +46,7 @@ class Top extends Component {
                             <div className="pd-tb top_area" style={animate}>
                                 <CurrentDate/>
             
-                                <div className="logo"  style={{textAlign:"center"}}>
-                                    <img src={logo} alt="logo.png"/>
-                                </div>
-
+                                <Branding/>
                                 <Clock/>
                             </div>    
                     )}

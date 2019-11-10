@@ -28,22 +28,13 @@ class Clock extends Component {
         return (
             <div>
                 <TweenOne 
-                animation={
-                    {
-                        x: 210,
-                        opacity: 0,                 
-                        scale: 1,
-                        scale:.5,
-                        color:'#fff',
-                        yoyo: true,
-                        repeat: -1,
-                        delay: 500,
-                        repeatDelay:1000,
-                        ease:"easeInSine",
-                        duration: 2000
-                    }
-                }
-
+                animation={[
+                    { opacity: 1, duration: 5000},
+                    { x: -80, duration: 4000 },
+                    { translateX: '70px',repeat:-1, duration: 3000, yoyo: true,ease:'easeInQuint' },
+                    {delay:2000}
+                    
+                  ]} style={{ opacity: 0 }}
                 >
 
                     <span>{

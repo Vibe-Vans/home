@@ -20,8 +20,8 @@ class Bottom extends Component {
             { top: 0 },
             {opacity:1},
             { left: '20%' },
-            {delay:500},
-            {duration:1000},
+            {delay:200},
+            {duration:2000},
             {ease:"easeInOutElastic"}
           
           ];
@@ -52,7 +52,7 @@ class Bottom extends Component {
             {
                 fade => ( 
                  
-                      <div style={fade}>
+                      <div style={fade} className="bottom_elem">
                         <TweenOne
                             animation={this.animation}
                             paused={this.props.paused}
