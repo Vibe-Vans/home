@@ -48,8 +48,9 @@ class CurrentWeather extends Component {
                   });
                 //   this.props.setTemp(Math.round(data.main.temp));
                })
-               }, 1000);
-                 
+            }, 1000
+        )
+        .catch((error) => console.log(error))              
     }
 
      
