@@ -17,16 +17,15 @@ class Branding extends Component {
               scaleY: 1.5,
               repeat: -1,
               yoyo: true,
-            //   ease:'easeInOutSine',
+              ease:'easeInOutSine',
             },
             {
               repeatDelay: 1000,
               duration: 2000,
-              y: 0,
-              appearTo: 0,
+              y: 10,
+              appearTo: 1,
               repeat: -1,
               yoyo: true,
-            //   ease:'eastInElastic'
             },
           ];
         return (
@@ -38,7 +37,7 @@ class Branding extends Component {
                   opacity: 1,
                   height: 50,
                   width: 50,
-                  transform: 'translate(0px,0px)',
+                  transform: 'translate(10px,0px)',
                   transformOrigin: 'center top',
                 }}
                 >

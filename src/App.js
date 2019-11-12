@@ -2,13 +2,16 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import "./Assets/css/main.css";
+import 'mapbox-gl/dist/mapbox-gl.css';
+
 import Top from "./Component/Top";
 import Bottom from "./Component/Bottom";
 import MapBox from './Component/MapBox';
-import background from "./Assets/images/Tunnel-1_1.mp4";
+import Map from './Component/Map';
 import CurrentWeather from "./Component/CurrentWeather";
-import DisplayScreen from './Component/DisplayScreen.js';
-import 'mapbox-gl/dist/mapbox-gl.css';
+import DisplayScreen from './Component/DisplayScreen';
+import background from './Assets/images/abstract-1.jpg';
+
 
 const styles = {
     layout: {
@@ -28,7 +31,7 @@ const styles = {
         left: 0,
         bottom: 0,
         top: 0,
-        width: '55px',
+        maxWidth: '70px',
         display: 'flex',
         justifyContent: 'space-evenly',
         margin: 'auto 0',
@@ -38,7 +41,7 @@ const styles = {
         right: 0,
         bottom: 0,
         top: 0,
-        width: '55px',
+        maxWidth: '70px',
         display: 'flex',
         justifyContent: 'space-evenly',
         margin: 'auto 0',
@@ -46,10 +49,9 @@ const styles = {
     },
     middle: {
         position: 'absolute',
-        top: '5%',
         width: '100%',
         height: 'auto',
-        margin: '0 auto',
+        margin: '10% auto',
         borderRadius: '15px',
 
     },
@@ -81,11 +83,14 @@ class App extends Component {
         return (
 
             <div className='row'>
-                <div className='col bg-mask'>
-                    <video loop autoPlay preload="true" className='video'>
+                <div className='col bg-mask' >
+
+                    {/* <video loop autoPlay preload="true" className='clip_video'>
                         <source src={background} type='video/mp4' />
                         <source src={background} type='video/ogg' />
-                    </video>
+                    </video> */}
+
+                    <img src={background} className='clip_img'/>
 
                     <div style={styles.layout} >
                         <div style={styles.top}>
@@ -101,9 +106,12 @@ class App extends Component {
                         {isTV_ON ? 
                             (<div style={styles.middle}>
                                 <DisplayScreen />
-                            </div> ): null
+                            </div> )
+                            : 
+                            (<div style={styles.middle}>
+                                <Map/>
+                            </div> )
                         }
-
                         <div style={styles.bottom}>
                             <Bottom wifi={this.state.wifi} />
                         </div>
@@ -117,7 +125,8 @@ class App extends Component {
                             x: 0,
                             y: 0,
                             width: '100%',
-                            height: '100%'
+                            height: '100%',
+                            position: 'relative'
                         }}
                     >
                         <defs>

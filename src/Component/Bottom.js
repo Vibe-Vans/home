@@ -1,8 +1,8 @@
-import React, {Component} from 'react'
-import '.././Assets/css/main.css';
-import {Spring, Keyframes} from 'react-spring/renderprops';
-import TweenOne from 'rc-tween-one';
-import BezierPlugin from 'rc-tween-one/lib/plugin/BezierPlugin';
+import React, { Component } from "react";
+import ".././Assets/css/main.css";
+import { Spring, Keyframes } from "react-spring/renderprops";
+import TweenOne from "rc-tween-one";
+import BezierPlugin from "rc-tween-one/lib/plugin/BezierPlugin";
 TweenOne.plugins.push(BezierPlugin);
 
 class Bottom extends Component {
@@ -10,66 +10,68 @@ class Bottom extends Component {
         super(props);
         this.moment = null;
         this.animation = [
-            { left: '-40%' },
-            { left: '40%' },
-            { top: '30px' },
-            { scale: 0 },
-            {opacity:.2},
-            { scale: 1 },
-            {opacity:.5},
-            { top: 0 },
-            {opacity:1},
-            { left: '20%' },
-            {delay:200},
-            {duration:2000},
-            {ease:"easeInOutElastic"}
-          
-          ];
-      }
+            {
+                scale:.6
+            },
+            {   ease:'easeInSine'},
+            {
+                color: "#673ab7"
+            },
+            {   ease:'easeInSine'},
+            {
+                scale: 1
+            },
+            {
+                opacity: 0.6
+            },
+            {   ease:'easeInSine'},
+            {
+                scale: 1.2
+            },
+            {   ease:'easeInSine'},
+            {   perspective: '1000px'},
+            {
+                translate3d: ('20PX', 0, 0)
+            },
+            {
+                color:'#e91e63'
+            },
+            {
+                scale:1.2
+            },
+            {
+                rotateX: (360)
+            },
+            {
+                duration: 5000
+            },
+            {
+                rotateX: (0)
+            },
+            {
+                color: "#673ab7"
+            },
+            {   translateY: '-20x'},
+            {
+                ease: "easeInOutElastic"
+            }
+           
+        ];
+    }
     render() {
         return (
-        
-          
-        <Spring 
-            from={
-                {
-                    opacity: 0,
-                    transform: 'translate3d(10px,0,0) scale(1.5) rotateX(5deg)'
+            <div className='bottom_elem'>
+                <TweenOne
+                    animation={this.animation}
+                    paused={this.props.paused}
+                    repeat={-1}
+                    yoyo
+                >
+                    <span>Wifi: {this.props.wifi}</span>
+                </TweenOne>
+            </div>
+        );
+    }
+}
 
-                }
-            }
-            to={
-                {opacity: 1,
-                    transform: 'translate3d(0px,0,0) scale(1) rotateX(5deg)'}
-            }
-            config={
-                {
-                    delay: 100,
-                    duration: 1000,
-                }
-              
-        }>
-            {
-                fade => ( 
-                 
-                      <div style={fade} className="bottom_elem">
-                        <TweenOne
-                            animation={this.animation}
-                            paused={this.props.paused}
-                            repeat={-1} 
-                            yoyo 
-                         >
-                                <span>Wifi: {this.props.wifi }</span>
-                        </TweenOne>
-                        
-                        </div>  
-                )   
-            }
-        </Spring>
-
-
-        )
-            }
-        }
-        
-        export default Bottom
+export default Bottom;

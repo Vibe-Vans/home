@@ -27,12 +27,10 @@ class CurrentDate extends Component {
 
             <TweenOne
                 animation={[
-                    { opacity: 1, duration: 5000 },
-                    { x: 80, duration: 4000 },
-                    { translateX: '-70px', repeat: -1, duration: 3000, yoyo: true, ease: 'easeInQuint' },
-                    { delay: 2000 }
+                    { translateX: '20px', scale:1.4,rotateX:760,repeat: -1, duration: 7000, yoyo: true, ease: 'easeInQuint',
+                    backgroundColor:'rgba(255,255,255,.2)', borderRadius:'4px', delay:2000},
                 ]
-                } style={{ opacity: 0 }}
+                } style={{ opacity: .5 }}
             >
                 {this.state.date.toLocaleDateString([],
                     { weekday: 'short', month: 'short', day: 'numeric' })}

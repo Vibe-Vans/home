@@ -33,7 +33,6 @@ class Top extends Component {
 
                         <div className="pd-tb top_area" style={animate}>
                             <CurrentDate />
-
                             <Branding />
                             <Clock />
                         </div>
