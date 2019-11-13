@@ -128,7 +128,7 @@ class CurrentWeather extends Component {
                     animate => (
                     <div className="half-cir half-cir-right" style={animate}>
                        
-                        <img src={icon} width="75px"/>
+                        <img src={icon}  classname='weather_icon'/>
                         <span>
                             {/* {this.state.currentTemp }<sup>o</sup>F */}
                             {this.state.currentTemp }<sup>o</sup>
