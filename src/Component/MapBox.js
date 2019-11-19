@@ -3,6 +3,7 @@ import { Spring, Transition, config } from 'react-spring/renderprops';
 import ReactMapboxGl, { Marker } from 'react-map-gl'
 import pin from '../Assets/icons/map-pin.png'
 import TravelTime from './TravelTime'
+import Texty from 'rc-texty'
 const MAPBOX_TOKEN = 'pk.eyJ1IjoiamhldHBhdGVsIiwiYSI6ImNrMnJ4NWg5ZTB1dDAzbW96eGF3dTZnMTUifQ.GYOQrb1-b0wkaxtp8gbIqA';
 
 export default function MapBox() {

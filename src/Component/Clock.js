@@ -38,10 +38,7 @@ class Clock extends Component {
                         color:'#fff',
                         delay: 2000
                         },]
-                    }
-                    style={
-                        {opacity: .5}
-                }>
+                    }>
 
                     <span>{
                         this.state.time.toLocaleTimeString([], {

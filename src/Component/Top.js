@@ -36,7 +36,8 @@ class Top extends Component {
                             <Branding />
                             <Clock />
                         </div>
-                    )}
+                    )
+                    }
             </Spring>
 
 

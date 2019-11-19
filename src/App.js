@@ -113,7 +113,7 @@ class App extends Component {
                             </div> )
                         }
                         <div style={styles.bottom}>
-                            <Bottom wifi={this.state.wifi} />
+                            <Bottom wifi= {'wifi: '+ this.state.wifi} />
                         </div>
 
                     </div>

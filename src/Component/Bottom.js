@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ".././Assets/css/main.css";
 import { Spring, Keyframes } from "react-spring/renderprops";
 import TweenOne from "rc-tween-one";
+import Texty from 'rc-texty'
 import BezierPlugin from "rc-tween-one/lib/plugin/BezierPlugin";
 TweenOne.plugins.push(BezierPlugin);
 
@@ -61,14 +62,12 @@ class Bottom extends Component {
     render() {
         return (
             <div className='bottom_elem'>
-                <TweenOne
-                    animation={this.animation}
-                    paused={this.props.paused}
-                    repeat={-1}
-                    yoyo
-                >
-                    <span>Wifi: {this.props.wifi}</span>
-                </TweenOne>
+           
+                    <Texty
+                    type='swing-rotate'
+                    mode='random'
+                  
+                    >{this.props.wifi}</Texty>
             </div>
         );
     }
