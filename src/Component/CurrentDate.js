@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import TweenOne from 'rc-tween-one'
+import Texty from 'rc-texty'
 
 
 class CurrentDate extends Component {
@@ -23,20 +24,23 @@ class CurrentDate extends Component {
         clearInterval(this.date);
     }
     render() {
+        const { date } = this.state
 
-        
         return (
 
             <TweenOne
                 animation={[
-                    { translateX: '20px', scale:1.4,rotateX:760,repeat: -1, duration: 7000, yoyo: true, ease: 'easeInQuint',
-                    backgroundColor:'rgba(255,255,255,.2)', borderRadius:'4px', delay:2000},
+                    {
+                         scale: 1.2, rotateX: 360, repeat: -1, duration: 7000, yoyo: true, ease: 'easeInQuint',
+                        delay: 2000
+                    },
                 ]
                 }
             >
-              
-                    {this.state.date.toLocaleDateString([],
-                { weekday: 'short', month: 'short', day: 'numeric' })}           
+
+                {date.toLocaleDateString([], { weekday: 'short', month: 'short', day: 'numeric' })}
+
+
             </TweenOne>
         )
     }

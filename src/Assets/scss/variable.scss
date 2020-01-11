@@ -1,0 +1,39 @@
+
+/*BRANDING COLORS */
+$yellow:    #f7c43a;
+$orange:    #f99718;
+$red:       #e32b16;
+$marron:    #780c04; 
+
+$headerColor:       #000000;
+$backgroundColor:   #faedca;
+
+
+/*PRIMARY TEXT COLORS */
+$primaryText:       #faeedd;
+$secondaryText:     #e32b16;
+
+
+/* FONT */
+
+@font-face {
+    font-family: 'Futura';
+    src: url('../fonts/bf8628d2-1ae0-4645-ba3f-3ce62d8d907c.ttf') format('truetype');
+    font-weight: 100, 200, 300, 400, normal, bold;
+    font-style: normal, bold, oblique, italic ;
+  }
+
+$fontName:         'Futura', Helvetica, 'Roboto',sans-serif;
+$lineHeight:        1rem;
+
+/*RADIUS*/
+$allRadius: 10px;
+$tileRadius:  90px;
+$pointedRadius: 35px 35px 35px 0;
+
+/* Gradient */
+$gradientBR:  linear-gradient(to top right, $red, $yellow);
+
+/* Box Shadow */
+
+$boxShadow:   0px 3px 10px rgba(0,0,0,0.1);  

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ".././Assets/css/main.css";
+import ".././assets/css/main.css";
 import { Spring, Keyframes } from "react-spring/renderprops";
 import TweenOne from "rc-tween-one";
 import Texty from 'rc-texty'

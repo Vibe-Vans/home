@@ -1,6 +1,6 @@
-import React, { Component, PropTypes } from 'react'
-import '../Assets/css/main.css';
-import logo from '../Assets/images/VibeVans.svg';
+import React, { Component } from 'react'
+// import '../assets/css/main.css';
+import logo from '../assets/images/VibeVans.svg';
 import TweenOne from 'rc-tween-one';
 
 class Branding extends Component {
@@ -29,7 +29,7 @@ class Branding extends Component {
             },
           ];
         return (
-            <div className="logo" style={{ textAlign: "center" }}>
+            <div className="logo">
                 <TweenOne
                 animation={anim}
                 style={{

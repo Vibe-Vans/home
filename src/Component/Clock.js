@@ -1,7 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import TweenOne from 'rc-tween-one/';
-import {whileStatement} from '@babel/types';
-
+import Texty from 'rc-texty'
 
 class Clock extends Component {
     constructor(props) {
@@ -13,7 +12,7 @@ class Clock extends Component {
     }
     componentDidMount() {
         this.time = setInterval(() => {
-            this.setState({time: new Date()})
+            this.setState({ time: new Date() })
         }, 1000);
 
 
@@ -27,7 +26,16 @@ class Clock extends Component {
 
         return (
             <div>
-                <TweenOne animation={
+
+                <Texty type='right' mode='reverse'>
+                    {
+                        this.state.time.toLocaleTimeString([], {
+                            hour: '2-digit',
+                            minute: '2-digit'
+                        })
+                    }
+                </Texty>
+                {/* <TweenOne animation={
                     [{
                         translateY: '10px',
                         scale: 1.2,
@@ -46,7 +54,7 @@ class Clock extends Component {
                             minute: '2-digit'
                         })
                     }</span>
-                </TweenOne>
+                </TweenOne> */}
             </div>
         );
     }
