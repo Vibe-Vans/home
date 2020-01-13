@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import TweenOne from 'rc-tween-one/';
 import Texty from 'rc-texty'
 
 class Clock extends Component {
@@ -14,8 +13,6 @@ class Clock extends Component {
         this.time = setInterval(() => {
             this.setState({ time: new Date() })
         }, 1000);
-
-
     }
 
     componentWillUnmount() {
@@ -35,26 +32,6 @@ class Clock extends Component {
                         })
                     }
                 </Texty>
-                {/* <TweenOne animation={
-                    [{
-                        translateY: '10px',
-                        scale: 1.2,
-                        rotateX: 360,
-                        repeat: -1,
-                        duration: 7000,
-                        yoyo: true,
-                        color:'#fff',
-                        delay: 2000
-                        },]
-                    }>
-
-                    <span>{
-                        this.state.time.toLocaleTimeString([], {
-                            hour: '2-digit',
-                            minute: '2-digit'
-                        })
-                    }</span>
-                </TweenOne> */}
             </div>
         );
     }

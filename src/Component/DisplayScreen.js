@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import tunnel from '../assets/images/Layers.mp4';
 // import scifiTunnel from '../assets/images/scifitunnel03.mp4';
 // import tunnel from '../assets/images/Tunnel-1_1.mp4';
-import { Spring } from 'react-spring/renderprops';
 import '../App.scss';
 import '../assets/scss/main.css';
 

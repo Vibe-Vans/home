@@ -4,16 +4,13 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "google-maps-react": "^2.0.2",
     "json-loader": "^0.5.7",
     "node-sass": "^4.13.0",
     "rc-texty": "^0.2.0",
-    "rc-tween-one": "^2.6.5",
+    "rc-tween-one": "^2.6.8",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-map-gl": "^5.1.2",
     "react-scripts": "^3.2.0",
-    "react-spring": "^8.0.27",
     "transform-loader": "^0.2.4",
     "webworkify-webpack": "^1.0.6"
   },

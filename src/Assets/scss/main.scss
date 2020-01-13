@@ -62,3 +62,37 @@
     border-radius: 20px;
     /* background-size: cover; */
   }
+
+.display_area {
+  position: relative;
+  margin: auto ;
+  width: 80%;
+  border-radius: 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+.display_video {
+  width: 100%;
+  border-radius: 40px;
+  /* background-size: cover; */
+}
+
+/*******************************************/
+/*          WELCOME TEXT AREA            */
+/*******************************************/
+.welcome{
+
+  display: flex;
+  justify-content: start;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  transform: translate(-50%, -50%);
+
+  h1{
+    font-size: 2em;
+  }
+}

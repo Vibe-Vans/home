@@ -43,7 +43,7 @@ export default class App extends Component {
                     </div>
                     <div className='col-12'>
                     <DisplayScreen/>
-                    <div style={{position:'absolute', display:'flex',justyfiContent:'center', zIndex:'5',textAlign:'center', top:'50%', left:'35%'}}>
+                    <div  className='welcome'>
                        <h1> <Texty type='scaleBig' mode='smooth'>{message}</Texty></h1>
                     </div>
                    

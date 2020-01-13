@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import '../assets/css/main.css';
 import logo from '../assets/images/VibeVans.svg';
 import TweenOne from 'rc-tween-one';
 

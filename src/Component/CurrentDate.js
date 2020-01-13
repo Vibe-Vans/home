@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import TweenOne from 'rc-tween-one'
 import Texty from 'rc-texty'
 
 
@@ -27,21 +26,13 @@ class CurrentDate extends Component {
         const { date } = this.state
 
         return (
+            <>
 
-            <TweenOne
-                animation={[
-                    {
-                         scale: 1.2, rotateX: 360, repeat: -1, duration: 7000, yoyo: true, ease: 'easeInQuint',
-                        delay: 2000
-                    },
-                ]
-                }
-            >
+                <Texty type='left' mode='reverse'>
 
-                {date.toLocaleDateString([], { weekday: 'short', month: 'short', day: 'numeric' })}
-
-
-            </TweenOne>
+                    {date.toLocaleDateString([], { weekday: 'short', month: 'short', day: 'numeric' })}
+                </Texty>
+            </>
         )
     }
 }
