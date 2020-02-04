@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
-import animation from '../assets/images/finalAnim.mp4';
+// import animation from '../assets/images/finalAnim.mp4';
+import animation from '../assets/images/animation_2.mp4'
 
 import '../App.scss';
 import '../assets/scss/main.css';
