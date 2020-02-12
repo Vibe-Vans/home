@@ -4,6 +4,8 @@ import Slideshow from './SlideShow'
 
 // import animation from '../assets/images/finalAnim.mp4';
 
+// import animation from '../assets/images/finalAnim.mp4';
+
 import '../App.scss';
 import '../assets/scss/main.css';
 
