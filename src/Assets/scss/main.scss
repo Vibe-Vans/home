@@ -1,6 +1,7 @@
 @import 'variable.scss';
 
 .main-content{
+  height: 100vh;
     padding: 40px 100px;
     display: flex;
     flex-direction: column;
@@ -17,6 +18,8 @@
 
 }
 .row-top-bottom{
+  color: $marron;
+    z-index: 5;
     bottom: 0;
     padding: 15px;
     height: 70px;
@@ -24,8 +27,8 @@
 .row-top{
   display: flex;
   justify-items: baseline;
-  // align-items: center;
-
+  align-items: center;
+top: 0;
 }
 
 .logo {
@@ -33,57 +36,34 @@
     text-align: center;
     margin-top: -10px;
   }
-//   .logo img {
-//     width: 55px;
-//     animation: animateLogo 8s infinite ease-in-out;
-//     animation-delay: 50s;
-//   }
-//   @keyframes animateLogo {
-//     0% {
-//       transform: rotateY(10deg);
-//     }
-//     100% {
-//       transform: rotateY(360deg);
-//     }
-//   }
+
 
 /*******************************************/
 /*          DISPLAY MIDDLE AREA            */
 /*******************************************/
-.display_area {
-    position: relative;
-    // margin: auto 8.5%;
-    // width: 90%;
-    height: 80%;
-    border-radius: 80px;
-    vertical-align: middle;
-    text-align: center;
-  }
-  .display_video {
-    width: 100%;
-    border-radius: 20px;
-    /* background-size: cover; */
-  }
 
 .display_area {
   position: relative;
-  margin: auto ;
-  width: 80%;
-  border-radius: 10px;
+  // margin: auto ;
+  // width: 80%;
+  // border-radius: 10px;
   vertical-align: middle;
   text-align: center;
 }
 .display_video {
   width: 100%;
-  border-radius: 40px;
-  /* background-size: cover; */
+  height: 100%;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 /*******************************************/
 /*          WELCOME TEXT AREA            */
 /*******************************************/
 .welcome{
-
   display: flex;
   justify-content: start;
   text-align: center;
@@ -95,6 +75,64 @@
   transform: translate(-50%, -50%);
 
   h1{
+    color: $marron;
     font-size: 2em;
   }
 }
+
+/*******************************************/
+/*               SLIDE SHOW                */
+/*******************************************/
+.slide-container {
+  width: 100%;
+  // height: 100%;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  // min-width: 100%;
+  // min-height: 100%;
+}
+
+
+
+.each-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 300px;
+}
+
+.each-slide span {
+  opacity: 0;
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  text-align: center;
+}
+
+.each-fade {
+  display: flex;
+}
+
+.each-fade .image-container {
+  width: 75%;
+  overflow: hidden;
+}
+
+.each-fade .image-container img {
+  width: 100%;
+}
+
+.each-fade h2 {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: #adceed;
+}.react-slideshow-container .nav {
+
+  opacity: 0 !important;
+}
+

@@ -1,25 +1,45 @@
 
 import React, { Component } from 'react';
-import animation from '../assets/images/finalAnim.mp4';
+import Slideshow from './SlideShow'
+
+// import animation from '../assets/images/finalAnim.mp4';
 
 import '../App.scss';
 import '../assets/scss/main.css';
 
 class DisplayScreen extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            isVideo:false
+        }
+    }
     render() {
+        const {isVideo} = this.state
         return (
             <div className="display_area">
-                <video loop autoPlay="true" playsInline preload="true" controls className="display_video">
-                    <source src={animation} />
-                    {/* <source src='http://techslides.com/demos/sample-videos/small.webm' type='video/webm' />
-                    <source src='http://techslides.com/demos/sample-videos/small.ogv' type='video/ogg' />
-                    <source src='http://techslides.com/demos/sample-videos/small.mp4' type='video/mp4' />
-                    <source src='http://techslides.com/demos/sample-videos/small.3gp' type='video/3gp' /> */}
+
+               {
+                isVideo ?  
+                <video loop autoPlay muted playsInline preload="true" controls className="display_video">
+                    {/* <source src={animation} /> */}
                 </video>
+                :
+
+                    <Slideshow/>
+               } 
+              
+
+            
+
             </div>
 
         )
     }
 
 }
+
+// DisplayScreen = subscribe({
+//     topic:'@demo/video'
+//   })(DisplayScreen)
 export default DisplayScreen

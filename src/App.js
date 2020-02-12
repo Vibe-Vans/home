@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Connector } from 'mqtt-react'
 
 import CurrentDate from './Component/CurrentDate'
 import Branding from './Component/Branding'
@@ -23,6 +24,7 @@ export default class App extends Component {
     render() {
 
         const {wifi, PW, ETA, message} = this.state
+
         return (
             <div className='main-content'>
                 <div className='row'>
@@ -41,14 +43,14 @@ export default class App extends Component {
 
                         </div>
                     </div>
-                    <div className='col-12'>
-                    <DisplayScreen/>
+                    {/* <div className='col-12'> */}
+                    {/* <DisplayScreen/> */}
                     <div  className='welcome'>
                        <h1> <Texty type='scaleBig' mode='smooth'>{message}</Texty></h1>
                     </div>
                    
-                    </div>
-                    <div className='col-12 row-top-bottom'>
+                    {/* </div> */}
+                    <div className='col-12 row-top-bottom' style={{marginTop:'650px'}}>
                         <div className='row row-bottom'>
                             <div className='col-4'>
                             <Texty type='flash' mode='random'>{`ETA: ${ETA}`}</Texty> 
@@ -69,7 +71,10 @@ export default class App extends Component {
 
                 </div>
 
+                <DisplayScreen/>
+
             </div>
+
         )
     }
 }
