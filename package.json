@@ -7,7 +7,7 @@
     "json-loader": "^0.5.7",
     "mqtt": "^3.0.0",
     "mqtt-react": "0.0.3",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "object.omit": "^3.0.0",
     "rc-texty": "^0.2.0",
     "rc-tween-one": "^2.6.8",
